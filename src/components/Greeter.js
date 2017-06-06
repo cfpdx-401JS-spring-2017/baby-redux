@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
-import { salutation, name, punctuation } from '../constants/constant';
+import React from 'react';
 
-export default class Greeter extends Component {
-  render() {
-    return (
-      <div>
-        <span>{salutation}</span>
-        <span>{name}{punctuation}</span>
-      </div>
-    );
-  }
+export default function Greeter({ salutation, name, punctuation }) {
+  return (
+    <div>
+      <span>{salutation} {name}{punctuation}</span>
+    </div>
+  );
 }

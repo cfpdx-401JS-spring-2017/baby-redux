@@ -6,9 +6,16 @@ import './index.css';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import reducer from './reducers/greeter.reducer';
+import greetingReducer from './reducers/greeter.reducer';
 
-const store = createStore(reducer);
+const store = createStore(
+  greetingReducer,
+  {
+    salutation: 'Hello',
+    name: 'Friend',
+    punctuation: '!'
+  }
+);
 
 ReactDOM.render(
   <Provider store={store}>

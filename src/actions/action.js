@@ -1,19 +1,22 @@
-import { SALUTATION, NAME, PUNCTUATION } from '../constants/constant';
+import * as actions from '../constants/constant';
 
-export function salutation() {
+export function salutation(payload) {
   return{
-    type: SALUTATION
+    type: actions.CHANGE_SALUTATION,
+    payload
   };
 }
 
-export function name() {
+export function name(payload) {
   return{
-    type: NAME
+    type: actions.CHANGE_NAME,
+    payload
   };
 }
 
-export function punctuation() {
+export function punctuation(payload) {
   return{
-    type: PUNCTUATION
+    type: actions.CHANGE_PUNCTUATION,
+    payload
   };
 }
