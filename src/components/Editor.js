@@ -4,7 +4,8 @@ export default class Editor extends Component {
   render() {
     return(
       <div>
-        <form onSubmit={} />
+        <form onSubmit={} 
+        />
       </div>
     );
   }

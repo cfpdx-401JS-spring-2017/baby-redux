@@ -5,3 +5,15 @@ export function salutation() {
     type: SALUTATION
   };
 }
+
+export function name() {
+  return{
+    type: NAME
+  };
+}
+
+export function punctuation() {
+  return{
+    type: PUNCTUATION
+  };
+}
