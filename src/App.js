@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GreeterContainer from './containers/GreeterContainer';
+import { GreeterContainer, EditorContainer } from './containers/Containers';
 import logo from './logo.svg';
 import './App.css';
 
@@ -12,6 +12,7 @@ class App extends Component {
           <h2>Welcome to Redux</h2>
         </div>
         <GreeterContainer />
+        <EditorContainer />
       </div>
     );
   }
