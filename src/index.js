@@ -8,7 +8,22 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import todoApp from './reducers/todo.reducer';
 
-const store = createStore(todoApp);
+const store = createStore(
+  todoApp,
+  {
+    visibilityFilter: 'SHOW_ALL',
+    todos: [
+      {
+        text: 'Consider using Redux',
+        completed: true,
+      },
+      {
+        text: 'Keep all state in a single tree',
+        completed: false
+      }
+    ]
+  }
+);
 
 ReactDOM.render(
   <Provider store={store}>
