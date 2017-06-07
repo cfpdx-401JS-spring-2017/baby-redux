@@ -7,13 +7,13 @@ export default function Editor(props) {
   return (
     <div>
       <form>
-        <input type="text" value={salutation} onChange={e => {
+        <input value={salutation} onChange={e => {
           changeSalutation(e.target.value);
         }} />
-        <input type="text" value={name} onChange={e => {
+        <input value={name} onChange={e => {
           changeName(e.target.value);
         }} />
-        <input type="text" value={punctuation} onChange={e => {
+        <input value={punctuation} onChange={e => {
           changePunctuation(e.target.value);
         }} />
       </form>
