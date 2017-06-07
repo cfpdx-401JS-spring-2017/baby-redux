@@ -1,15 +1,15 @@
 import {CHANGE_NAME, CHANGE_GREETING} from './constants';
 
-export function changeName (name = 'chris') {
+export function changeName (payload = 'chris') {
     return {
         type: CHANGE_NAME,
-        name
+        payload
     }
 }
 
-export function changeName (greeting = 'hello') {
+export function changeGreeting (payload = 'hello') {
     return {
         type: CHANGE_GREETING,
-        greeting
+        payload
     }
 }
