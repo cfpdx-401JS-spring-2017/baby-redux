@@ -1,4 +1,4 @@
-import { CHANGE_SALUTATION, CHANGE_NAME } from '../constants/greeter-constants';
+import { CHANGE_SALUTATION, CHANGE_NAME } from '../constants/greeter.constants';
 
 export function changeSalutation(payload) {
   return {

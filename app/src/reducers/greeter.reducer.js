@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export default function GreeterApp(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case CHANGE_SALUTATION:
       return Object.assign({}, state, { salutation: action.payload });
     case CHANGE_NAME:

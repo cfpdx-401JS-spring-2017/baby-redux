@@ -3,9 +3,9 @@ import React from 'react';
 export default function Greeter({ salutation, name }) {
   return (
     <div className="Greeter">
-      <p className="greeting">
+      <span className="greeting">
         {salutation}, {name}!
-      </p>
+      </span>
     </div>
   );
 }
