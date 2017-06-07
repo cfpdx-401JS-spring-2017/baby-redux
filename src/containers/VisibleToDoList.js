@@ -1,12 +1,6 @@
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import ToDoList from '../components/ToDoList';
-import {
-  ADD_TODO,
-  TOGGLE_TODO,
-  SET_VISIBILITY_FILTER,
-  VisibilityFilters
-} from '../constants/constant';
+import { VisibilityFilters } from '../constants/constant';
 import * as actions from '../actions/action';
 
 const { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } = VisibilityFilters;
@@ -19,13 +13,23 @@ const getVisibleToDos = (todos, filter) => {
       return todos.filter(t => t.completed);
     case SHOW_ACTIVE:
       return todos.filter(t => !t.completed);
+    default:
+      return filter;
   }
 };
 
-const mapStateToProps = state => state;
-
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(actions, dispatch);
+const mapStateToProps = state => {
+  return {
+    todos: getVisibleToDos(state.todos, state.visibilityFilter)
+  };
 };
 
-export const GreeterContainer = connect(mapStateToProps)(ToDoList);
+const mapDispatchToProps = dispatch => {
+  return {
+    onTodoClick: (id) => {
+      dispatch(actions.toggleToDo(id));
+    }
+  };
+};
+
+export const VisibleToDoList = connect(mapStateToProps, mapDispatchToProps)(ToDoList);
