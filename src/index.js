@@ -6,16 +6,9 @@ import './index.css';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import greetingReducer from './reducers/greeter.reducer';
+import todoApp from './reducers/todo.reducer';
 
-const store = createStore(
-  greetingReducer,
-  {
-    salutation: 'Hello',
-    name: 'Friend',
-    punctuation: '!'
-  }
-);
+const store = createStore(todoApp);
 
 ReactDOM.render(
   <Provider store={store}>

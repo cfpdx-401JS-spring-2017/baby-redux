@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Greeter({ salutation, name, punctuation }) {
+export default function ToDoList({ salutation, name, punctuation }) {
   return (
     <div>
       <span>{salutation} {name}{punctuation}</span>
