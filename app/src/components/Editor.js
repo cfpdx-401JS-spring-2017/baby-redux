@@ -1,4 +1,5 @@
 import React from 'react';
+import GreeterInput from './GreeterInput';
 
 export default function Editor(props) {
   const { changeSalutation, changeName } = props;
@@ -8,33 +9,8 @@ export default function Editor(props) {
       <p>
         Change your greeting by using these controls: 
       </p>
-      <form onSubmit={e => {
-        e.preventDefault();
-        changeSalutation(e.target.elements.salutation.value);
-        e.target.reset();
-      }}>
-        <label>
-          Salutation:
-          <input name="salutation"/>
-          <button>
-            submit
-          </button>
-        </label>
-      </form>
-     
-      <form onSubmit={e => {
-        e.preventDefault();
-        changeName(e.target.elements.name.value);
-        e.target.reset();  
-      }}>
-        <label>
-          Name:
-          <input name="name"/>
-          <button>
-            submit
-          </button>
-        </label>
-      </form>
+      <GreeterInput field={'salutation'} handleSubmit={changeSalutation} />
+      <GreeterInput field={'name'} handleSubmit={changeName} />
     </div>
   );
 }
