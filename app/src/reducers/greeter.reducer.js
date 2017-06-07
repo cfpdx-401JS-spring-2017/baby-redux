@@ -1,8 +1,8 @@
 import { CHANGE_SALUTATION, CHANGE_NAME } from '../constants/greeter.constants';
 
 const initialState = {
-  salutation: 'Hello',
-  name: 'Yuval'
+  salutation: 'hello',
+  name: 'there'
 };
 
 export default function GreeterApp(state = initialState, action) {

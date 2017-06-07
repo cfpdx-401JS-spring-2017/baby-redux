@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function Editor(props) {
-  const { salutation, name } = props;
   const { changeSalutation, changeName } = props;
 
   return (
@@ -9,22 +8,33 @@ export default function Editor(props) {
       <p>
         Change your greeting by using these controls: 
       </p>
-      <label>
-        Salutation:
-        <input 
-          name="salutation" 
-          value={salutation} 
-          onChange={e => changeSalutation(e.target.value)}
-        /> 
-      </label>
-      <label>
-        Name:
-        <input 
-          name="name" 
-          value={name} 
-          onChange={e => changeName(e.target.value)}
-        /> 
-      </label>
+      <form onSubmit={e => {
+        e.preventDefault();
+        changeSalutation(e.target.elements.salutation.value);
+        e.target.reset();
+      }}>
+        <label>
+          Salutation:
+          <input name="salutation"/>
+          <button>
+            submit
+          </button>
+        </label>
+      </form>
+     
+      <form onSubmit={e => {
+        e.preventDefault();
+        changeName(e.target.elements.name.value);
+        e.target.reset();  
+      }}>
+        <label>
+          Name:
+          <input name="name"/>
+          <button>
+            submit
+          </button>
+        </label>
+      </form>
     </div>
   );
 }
