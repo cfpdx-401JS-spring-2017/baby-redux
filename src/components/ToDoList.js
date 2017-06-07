@@ -1,9 +1,16 @@
 import React from 'react';
+import ToDo from './ToDo';
 
-export default function ToDoList({ salutation, name, punctuation }) {
+export default function ToDoList({ todos, onTodoClick }) {
   return (
-    <div>
-      <span>{salutation} {name}{punctuation}</span>
-    </div>
+    <ul>
+      {todos.map(todo => (
+        <ToDo
+          key={todo.id}
+          {...todo}
+          onClick={() => onTodoClick(todo.id)}
+        />
+      ))}
+    </ul>
   );
 }
