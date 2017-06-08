@@ -4,7 +4,7 @@ export default function Link({ active, children, onClick }) {
   if (active) return <span>{children}</span>;
 
   return (
-    <a href="#"
+    <a href=""
       onClick={e => {
         e.preventDefault();
         onClick();

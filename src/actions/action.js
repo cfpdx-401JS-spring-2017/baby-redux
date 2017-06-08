@@ -1,6 +1,6 @@
 import * as actions from '../constants/constant';
 
-let nextToDoId = 0;
+let nextToDoId = 2;
 
 export function addToDo(text) {
   return{

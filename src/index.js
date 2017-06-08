@@ -15,10 +15,12 @@ const store = createStore(
     todos: [
       {
         text: 'Consider using Redux',
+        id: 0,
         completed: true,
       },
       {
         text: 'Keep all state in a single tree',
+        id: 1,
         completed: false
       }
     ]
