@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FilterLink from './containers/FilterLink';
 import VisibleToDoList from './containers/VisibleToDoList';
+import AddToDo from './containers/AddToDo';
 import Footer from './components/Footer';
 import logo from './logo.svg';
 import './App.css';
@@ -13,6 +14,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to Redux</h2>
         </div>
+        <AddToDo />
         <VisibleToDoList />
         <FilterLink />
         <Footer />
