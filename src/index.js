@@ -6,14 +6,24 @@ import './index.css';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import greetingReducer from './reducers/greeter.reducer';
+import todoApp from './reducers/todo.reducer';
 
 const store = createStore(
-  greetingReducer,
+  todoApp,
   {
-    salutation: 'Hello',
-    name: 'Friend',
-    punctuation: '!'
+    visibilityFilter: 'SHOW_ALL',
+    todos: [
+      {
+        text: 'Consider using Redux',
+        id: 0,
+        completed: true,
+      },
+      {
+        text: 'Keep all state in a single tree',
+        id: 1,
+        completed: false
+      }
+    ]
   }
 );
 

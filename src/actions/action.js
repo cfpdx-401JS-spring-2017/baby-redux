@@ -1,22 +1,25 @@
 import * as actions from '../constants/constant';
 
-export function changeSalutation(payload) {
+let nextToDoId = 2;
+
+export function addToDo(text) {
   return{
-    type: actions.CHANGE_SALUTATION,
-    payload
+    type: actions.ADD_TODO,
+    id: nextToDoId++,
+    text
   };
 }
 
-export function changeName(payload) {
+export function toggleToDo(id) {
   return{
-    type: actions.CHANGE_NAME,
-    payload
+    type: actions.TOGGLE_TODO,
+    id
   };
 }
 
-export function changePunctuation(payload) {
+export function setVisibility(filter) {
   return{
-    type: actions.CHANGE_PUNCTUATION,
-    payload
+    type: actions.SET_VISIBILITY_FILTER,
+    filter
   };
 }
