@@ -11,10 +11,10 @@ export default function Salutation(props) {
       </div>
       <div>
         <h3>Change the salutation!</h3>
-        <input value={salutation} onChange={e => {changeSalutation(e.target.value)}} />
+        <input value={salutation} onChange={e => {changeSalutation(e.target.value);}} />
         <br />
         <h3>Change the name!</h3>
-        <input value={name} onChange={e => {changeName(e.target.value)}} />
+        <input value={name} onChange={e => {changeName(e.target.value);}} />
       </div>
     </div>
   );
