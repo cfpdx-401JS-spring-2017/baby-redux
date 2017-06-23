@@ -5,7 +5,7 @@ export default function NameApp(state, {type, payload}) {
     case CHANGE_NAME:
       return { ...state, name: payload };
     case CHANGE_SALUTATION:
-      return { ...state, name: payload };
+      return { ...state, salutation: payload };
     default:
       return state;
   }
