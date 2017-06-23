@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import * as actions from './actions';
 import Salutation from './Salutation';
 
-const mapStateToProps = (state) => state;
+const mapStateToProps = state => state;
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(actions, dispatch);
@@ -12,9 +12,7 @@ function mapDispatchToProps(dispatch) {
 const SalutationContainer = connect (
   mapStateToProps,
   mapDispatchToProps
-)(
-  Salutation
-);
+)(Salutation);
 
 export default SalutationContainer;
 

@@ -7,7 +7,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './salutation/reducers';
 
-const store = createStore(reducer);
+const store = createStore(reducer, {name: 'morgan', salutation: 'hello'});
 
 ReactDOM.render(
   <Provider store={store}>
