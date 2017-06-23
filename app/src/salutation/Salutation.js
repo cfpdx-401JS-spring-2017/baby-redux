@@ -1,6 +1,6 @@
 import React, { component } from 'react';
 
-export default function Salutation() {
+export default function Salutation(props) {
   const { changeName, changeSalutation, name, salutation } = props;
 
   return (
